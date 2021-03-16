@@ -1,11 +1,17 @@
 /** @format */
 
-import "./App.css";
+import { Contact } from "./components/contacts/Contact";
+import { Navbar } from "./components/Navbar";
 
 function App() {
   return (
     <div className='App'>
-      <hi>helooooooo</hi>
+      <Navbar />
+      <div classname='container'>
+        <div className='py-3'>
+          <Contact />
+        </div>
+      </div>
     </div>
   );
 }
