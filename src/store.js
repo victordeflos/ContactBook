@@ -3,6 +3,7 @@
 import { createStore } from "redux";
 import { composeWithDevTools } from "redux-devtools-extension";
 
+// Useing Redux
 const initialState = {
   contacts: [
     {
