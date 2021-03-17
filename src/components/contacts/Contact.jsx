@@ -6,12 +6,14 @@ export const Contact = () => {
   const contacts = useSelector((state) => state.contacts)
   console.log(contacts);
     return (
-        <div>
-            <table class="table shadow table-info table-striped">
+      <div>
+           <table class="table shadow table-info table-striped">
            
  
   <thead>
       <tr>
+       <th>
+      </th>
       <th>Name</th>
       <th>Phone</th>
       <th>Email</th>

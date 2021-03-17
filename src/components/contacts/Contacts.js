@@ -2,7 +2,10 @@
 
 import React from 'react';
 
-export const Contacts = (props) => {
+export const Contacts = ({ contact }) => {
+  // Distructuring           Props
+
+  const { name, phone, email } = contact;
   return (
     <tr>
       <td scope='row'>
@@ -12,9 +15,9 @@ export const Contacts = (props) => {
         </div>
       </td>
 
-      <td>{props.contact.name}</td>
-      <td>{props.contact.phone}</td>
-      <td>{props.contact.email}</td>
+      <td>{name}</td>
+      <td>{phone}</td>
+      <td>{email}</td>
     </tr>
   );
 };
