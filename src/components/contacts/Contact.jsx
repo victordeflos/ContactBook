@@ -7,7 +7,7 @@ export const Contact = () => {
   console.log(contacts);
     return (
       <div>
-           <table class="table shadow table-info table-striped">
+           <table class="table shadow">
            
  
   <thead>
