@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 
 
@@ -7,10 +8,10 @@ export const Navbar = () => {
         <div>
             <nav className="navbar shadow fixed-top navbar-expand-sm navbar-dark bg-info">
                 <div className="container">
-                <button class="navbar-brand-primary" href="#">Contact_BOOK</button>
+                <Link class="navbar-brand-primary" to="/">Contact_BOOK</Link>
                 <div>
-                    <a className="btn btn-danger ml-auto">Create Contact
-                    </a>
+                    <Link to='/contacts/add' className="btn btn-danger ml-auto">Create Contact
+                    </Link>
                     </div>
                     </div>
                 </nav>
