@@ -13,7 +13,7 @@ function App() {
       <Router>
         <div className='App'>
           <Navbar />
-          <div classname='container'>
+          <div className='container'>
             <div className='py-3'>
               <Switch>
                 <Route exact path='/' component={Contact} />
