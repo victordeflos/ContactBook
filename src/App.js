@@ -6,6 +6,7 @@ import { Navbar } from './components/Navbar';
 import store from './store';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Addcontact } from './components/contacts/Addcontact';
+import { Editcontact } from './components/contacts/Editcontact';
 
 function App() {
   return (
@@ -18,6 +19,11 @@ function App() {
               <Switch>
                 <Route exact path='/' component={Contact} />
                 <Route exact path='/contacts/add' component={Addcontact} />
+                <Route
+                  exact
+                  path='/contacts/edit/:id'
+                  component={Editcontact}
+                />
               </Switch>
             </div>
           </div>

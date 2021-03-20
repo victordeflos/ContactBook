@@ -2,9 +2,10 @@
 
 import React from 'react';
 import Avatar from 'react-avatar';
+import { Link } from 'react-router-dom';
 
 export const Contacts = ({ contact }) => {
-  const { name, phone, email } = contact;
+  const { name, phone, email, id } = contact;
   return (
     <tr>
       <th scope='row'>
@@ -21,9 +22,9 @@ export const Contacts = ({ contact }) => {
       <td>{phone}</td>
       <td>{email}</td>
       <td>
-        <a href='#'>
+        <Link to={'/contacts/edit/${id}'}>
           <span className='material-icons'>edit</span>
-        </a>
+        </Link>
 
         <a href='#'>
           <span className='material-icons'>remove_circle</span>
