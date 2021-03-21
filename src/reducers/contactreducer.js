@@ -1,6 +1,6 @@
 /** @format */
 
-import { CREATE_CONTACT } from '../constent/types';
+import { CREATE_CONTACT, GET_CONTACT } from '../constent/types';
 
 const initialState = {
   contacts: [
@@ -235,6 +235,7 @@ const initialState = {
       },
     },
   ],
+  contact: null,
 };
 export const contactReducer = (state = initialState, action) => {
   switch (action.type) {
@@ -242,6 +243,19 @@ export const contactReducer = (state = initialState, action) => {
       return {
         ...state,
         contacts: [action.payload, ...state.contacts],
+      };
+
+    case GET_CONTACT:
+      let arr = state.contacts.filter(
+        (contact) => contact.id === action.payload
+      );
+      arr = arr.values();
+      for (let val of arr) {
+        arr = val;
+      }
+      return {
+        ...state,
+        contact: arr,
       };
     default:
       return state;

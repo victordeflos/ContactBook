@@ -5,15 +5,17 @@ import Avatar from 'react-avatar';
 import { Link } from 'react-router-dom';
 
 export const Contacts = ({ contact }) => {
+
   const { name, phone, email, id } = contact;
+  
   return (
     <tr>
-      <th scope='row'>
+      <td scope='row'>
         <div className='custom-control custom-chackbox'>
           <input type='checkbox' className='custom-control-input' />
           <label className='custom-control-label'></label>
         </div>
-      </th>
+      </td>
 
       <td>
         <Avatar className='mr-2' name={name} size='35' round={true} />

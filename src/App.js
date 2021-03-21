@@ -3,8 +3,8 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import { Contact } from './components/contacts/Contact';
 import { Navbar } from './components/Navbar';
-import store from './store';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import store from './store';
 import { Addcontact } from './components/contacts/Addcontact';
 import { Editcontact } from './components/contacts/Editcontact';
 

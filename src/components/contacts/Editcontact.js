@@ -1,41 +1,28 @@
 /** @format */
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
-
-import { useHistory } from 'react-router-dom';
+import { getContact } from '../../actions/contactaction';
+import { useHistory, useParams } from 'react-router-dom';
 
 export const Editcontact = () => {
+  let { id } = useParams();
+  useEffect(() => {
+    dispatch(getContact(id));
+  }, []);
   let history = useHistory();
-
   const [name, setName] = useState('');
   const [phone, setphone] = useState('');
   const [email, setemail] = useState('');
 
   const dispatch = useDispatch();
 
-  function createContact(e) {
-    e.preventDefault();
-    console.log('name:', name);
-    console.log('phone:', phone);
-    console.log('email:', email);
-    const shortid = require('shortid');
-    const new_contact = {
-      id: shortid.generate(),
-      name: name,
-      phone: phone,
-      email: email,
-    };
-    dispatch(Editcontact(new_contact));
-    history.push('/');
-  }
-
   return (
     <div>
       <div className='card border-0 shadow'>
-        <div className='card-header'>New_contact</div>
+        <div className='card-header'>Edit_contact</div>
         <div className='card-body'>
-          <form onSubmit={(e) => createContact(e)}>
+          <form>
             <div className='form-group'>
               <input
                 type='text'
