@@ -63,7 +63,7 @@ export const Addcontact = () => {
                 onChange={(e) => setemail(e.target.value)}
               />
             </div>
-            <button className='btn btn-info' type='Submit'>
+            <button className='btn btn-info' type='submit'>
               Add_contact
             </button>
           </form>
