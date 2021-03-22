@@ -8,7 +8,8 @@ export const Navbar = () => {
         <div>
             <nav className="navbar shadow fixed-top navbar-expand-sm navbar-dark bg-info">
                 <div className="container">
-                <Link className="navbar-brand-primary" to="/">Contact_BOOK</Link>
+                    <Link className="navbar-brand-primary"
+                        to="/">Contact_BOOK</Link>
                 <div>
                     <Link to='/contacts/add' className="btn btn-danger ml-auto">Create Contact
                     </Link>
