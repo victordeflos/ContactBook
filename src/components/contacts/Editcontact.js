@@ -27,6 +27,7 @@ export const Editcontact = () => {
 
   function onUpdateContact(e) {
     e.preventDefault();
+
     const update_contact = Object.assign(contact, {
       name: name,
       phone: phone,
@@ -39,7 +40,7 @@ export const Editcontact = () => {
   return (
     <div>
       <div className='card border-0 shadow'>
-        <div className='card-header'>Edit_contact</div>
+        <div className='card-header'>Add a contact</div>
         <div className='card-body'>
           <form onSubmit={(e) => onUpdateContact(e)}>
             <div className='form-group'>
@@ -70,7 +71,7 @@ export const Editcontact = () => {
               />
             </div>
             <button className='btn btn-danger' type='submit'>
-              Edit_contact
+              Edit contact
             </button>
           </form>
         </div>

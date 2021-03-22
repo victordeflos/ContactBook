@@ -1,12 +1,17 @@
 /** @format */
 
-import { CREATE_CONTACT, GET_CONTACT, UPDATE_CONTACT } from '../constent/types';
+import {
+  CREATE_CONTACT,
+  DELTE_CONTACT,
+  GET_CONTACT,
+  UPDATE_CONTACT,
+} from '../constent/types';
 
 const initialState = {
   contacts: [
     {
       id: 1,
-      name: 'Leanne Graham',
+      name: 'Teo Blazhevski',
       username: 'Bret',
       email: 'Sincere@april.biz',
       address: {
@@ -247,7 +252,7 @@ export const contactReducer = (state = initialState, action) => {
 
     case GET_CONTACT:
       let arr = state.contacts.filter(
-        (contact) => contact.id === action.payload
+        (contact) => contact.id == action.payload
       );
       arr = arr.values();
       for (let val of arr) {
@@ -261,7 +266,14 @@ export const contactReducer = (state = initialState, action) => {
       return {
         ...state,
         contacts: state.contacts.map((contact) =>
-          contact.id === action.payload.id ? action.payload : contact
+          contact.id == action.payload.id ? action.payload : contact
+        ),
+      };
+    case DELTE_CONTACT:
+      return {
+        ...state,
+        contacts: state.contacts.filter(
+          (contact) => contact.id != action.payload
         ),
       };
     default:
