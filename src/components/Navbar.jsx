@@ -9,7 +9,7 @@ export const Navbar = () => {
             <nav className="navbar shadow fixed-top navbar-expand-sm navbar-dark bg-info">
                 <div className="container">
                     <Link className="navbar-brand-primary"
-                        to="/">Contact_BOOK</Link>
+                        to="/">Movie Book</Link>
                 <div>
                     <Link to='/contacts/add' className="btn btn-danger ml-auto">Create Contact
                     </Link>

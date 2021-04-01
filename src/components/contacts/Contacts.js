@@ -35,11 +35,13 @@ export const Contacts = ({ contact, SelectAll }) => {
         </Link>
 
         <span
-          className='material-icons'
+        
+          
           onClick={() => {
             dispatch(deleteContact(id));
-          }}>
-          remove_circle
+          }} 
+          className='material-icons'  type="button" class="btn btn-dark">
+
         </span>
       </td>
     </tr>
